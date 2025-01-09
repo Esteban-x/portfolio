@@ -1,5 +1,5 @@
 import { Linkedin } from 'lucide-react'
-import { Twitter } from 'lucide-react'
+import { Github } from 'lucide-react'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
@@ -33,7 +33,7 @@ const Footer = () => {
           <Linkedin className='group-hover:text-[#8563c8]' />
         </motion.a>
         <motion.a
-          href='https://x.com/Estebanx0x'
+          href='https://github.com/Esteban-x'
           className='social-icon group'
           target='blank'
           whileHover={{ scale: 1.1 }}
@@ -42,7 +42,7 @@ const Footer = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.1 }}
         >
-          <Twitter className='group-hover:text-[#8563c8]' />
+          <Github className='group-hover:text-[#8563c8]' />
         </motion.a>
       </div>
       <p className='text-white-500 p-3'>
