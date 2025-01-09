@@ -213,7 +213,7 @@ const Hero = () => {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
       >
-        <a href='#about' className='inline-block'>
+        <a href='/assets/CV.pdf' download className='inline-block'>
           <Button
             name='Télécharger mon CV'
             isBeam
