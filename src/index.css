@@ -127,7 +127,7 @@ body {
   }
 
   .field-input {
-    @apply w-full bg-black-300  px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-[#8954F1]/70;
+    @apply w-full bg-black-300  px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-[#8563c8]/70;
   }
 
   .field-btn {

@@ -68,19 +68,30 @@ const Projects = () => {
                     </div>
                   ))}
                 </div>
-                <a
+                <motion.a
                   href={currentProject.href}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                   target='blank'
                   rel='noreferrer'
-                  className='flex z-20 items-center gap-2 cursor-pointer text-white-600'
+                  animate={{
+                    x: [0, 3, 0], // Déplacement léger gauche-droite
+                  }}
+                  className='flex z-20 items-center gap-2 cursor-pointer text-md text-white group hover:text-blue-400'
                 >
-                  <p>Lien vers le site</p>
-                  <img
+                  <p className='text-lg'>Lien vers le site</p>
+
+                  <motion.img
                     src='/assets/arrow-white.png'
                     alt='arrow'
-                    className='w-3 h-3'
+                    className='w-4 h-4 waving-hand'
+                    animate={
+                      isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }
+                    }
+                    transition={{ duration: 0.5 }}
                   />
-                </a>
+                </motion.a>
               </div>
               <div className='flex justify-between items-center mt-7'>
                 <div className='relative'>
@@ -102,8 +113,9 @@ const Projects = () => {
                   <motion.button
                     className='arrow-btn flex items-center justify-center rounded-full overflow-hidden'
                     onClick={() => handleNavigation('previous')}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.3 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <img
                       src='/assets/left-arrow.png'
@@ -132,8 +144,9 @@ const Projects = () => {
                   <motion.button
                     className='arrow-btn flex items-center justify-center rounded-full overflow-hidden'
                     onClick={() => handleNavigation('next')}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.3 }}
                     whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <img
                       src='/assets/right-arrow.png'

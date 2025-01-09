@@ -137,20 +137,20 @@ const Contact = () => {
               className='field-btn fume-effect flex items-center justify-center gap-2 group'
               type='submit'
               disabled={loading}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ y: 10, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               {loading ? (
                 <div className='h-5 w-5 animate-spin rounded-full border-b-2 border-white'></div>
               ) : (
-                <div className='font-medium flex  flex-row gap-3 items-center'>
+                <div className='font-medium flex  flex-row gap-3 group-hover:text-[#ebeaea] items-center'>
                   Envoyer
                   <FaPaperPlane
                     size={16}
-                    className='text-sm mt-0.5 transition-transform duration-500  group-hover:text-[#8954F1]'
+                    className='text-sm mt-0.5 transition-transform duration-500  group-hover:text-[#8563c8]'
                   />
                 </div>
               )}

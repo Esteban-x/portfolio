@@ -98,7 +98,7 @@ const About = () => {
           <div className='grid-container'>
             <video
               src='/assets/techstack.mp4'
-              className='w-full opacity-70 sm:h-[276px] h-fit object-contain'
+              className='w-full opacity-90 sm:h-[276px] h-fit object-contain'
               autoPlay
               loop
               muted

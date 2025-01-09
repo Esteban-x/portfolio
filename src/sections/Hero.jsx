@@ -208,16 +208,16 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className='absolute bottom-7 left-0 right-0 w-full z-10 c-space'
+        className='absolute bottom-7 left-0 right-0 flex justify-center z-10'
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
       >
-        <a href='#about' className='w-fit'>
+        <a href='#about' className='inline-block'>
           <Button
             name='Télécharger mon CV'
             isBeam
-            containerClass='sm:w-fit w-full shadow-md shadow-[#8954F1]/50 sm:min-w-96 border border-[#8954F1] hover:border hover:border-[#8954F1]'
+            containerClass='sm:w-fit w-full p-5 shadow-md shadow-[#8954F1]/50 sm:min-w-96 border border-[#8954F1] hover:border hover:border-[#8954F1]'
           />
         </a>
       </motion.div>

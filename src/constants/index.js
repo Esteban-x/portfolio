@@ -1,26 +1,21 @@
 export const navLinks = [
   {
     id: 1,
-    name: 'Acceuil',
-    href: '#home',
-  },
-  {
-    id: 2,
     name: 'A propos',
     href: '#about',
   },
   {
-    id: 3,
+    id: 2,
     name: 'Projets',
     href: '#projects',
   },
   {
-    id: 4,
+    id: 3,
     name: 'Expériences',
     href: '#experiences',
   },
   {
-    id: 5,
+    id: 4,
     name: 'Contact',
     href: '#contact',
   },
@@ -180,7 +175,7 @@ export const calculateSizes = (
       (isHeightXs && isSmall) || (isHeightXs && isMobile)
         ? [0.1, -6, -10]
         : (isHeightSmall && isSmall) || (isHeightSmall && isMobile)
-          ? [0.1, -6.5, -10]
+          ? [0.1, -8, -10]
           : (isHeightMedium && isSmall) || (isHeightMedium && isMobile)
             ? [0.1, -5, -10]
             : (isHeightMobile && isSmall) || (isHeightMobile && isMobile)
