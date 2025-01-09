@@ -1,6 +1,5 @@
-'use client'
-
 import { Html, useProgress } from '@react-three/drei'
+import { BeatLoader } from 'react-spinners'
 
 const CanvasLoader = () => {
   const { progress } = useProgress()
@@ -11,10 +10,7 @@ const CanvasLoader = () => {
       center
       className='flex flex-col items-center justify-center w-full h-full gap-4 bg-black bg-opacity-50'
     >
-      <span
-        className='loading loading-spinner text-primary'
-        style={{ height: '3rem', width: '3rem' }}
-      />
+      <BeatLoader color='#8954F1' size={20} />
 
       <div className='w-3/4 mt-4'>
         <progress
@@ -23,10 +19,6 @@ const CanvasLoader = () => {
           max='100'
         ></progress>
       </div>
-
-      <p className='text-lg font-bold text-white'>
-        {progress !== 0 ? `${progress.toFixed(2)}%` : 'Chargement...'}
-      </p>
     </Html>
   )
 }
