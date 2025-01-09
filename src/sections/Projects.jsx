@@ -159,7 +159,7 @@ const Projects = () => {
             </div>
           </motion.div>
           <div className='bg-transparent rounded-lg h-96 md:h-full '>
-            <Canvas>
+            <Canvas style={isMobile ? { pointerEvents: 'none' } : {}}>
               <ambientLight intensity={Math.PI / 2} />
               <directionalLight position={[10, 10, 5]} />
               <Center>

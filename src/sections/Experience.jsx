@@ -9,11 +9,13 @@ import { Canvas } from '@react-three/fiber'
 import { useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
+import { useMediaQuery } from 'react-responsive'
 
 const Experience = () => {
   const [animationName, setAnimationName] = useState('idle')
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { threshold: 0.2 })
+  const isMobile = useMediaQuery({ maxWidth: 1024 })
 
   return (
     <motion.section
@@ -36,14 +38,14 @@ const Experience = () => {
 
         <div className='work-container '>
           <motion.div
-            className='work-canvas'
+            className='work-canvas '
             initial={{ scale: 0.8, opacity: 0 }}
             animate={
               isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }
             }
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
           >
-            <Canvas>
+            <Canvas style={isMobile ? { pointerEvents: 'none' } : {}}>
               <ambientLight intensity={0.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[10, 10, 10]} intensity={1} />

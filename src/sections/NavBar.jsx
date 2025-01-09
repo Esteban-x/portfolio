@@ -41,7 +41,7 @@ const MobileNavItems = ({ onClick = () => {} }) => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const closeMenu = () => setIsOpen(false)
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
@@ -96,7 +96,7 @@ const Navbar = () => {
         <nav className='p-5 h-screen flex items-center bg-black-100 justify-center'>
           <ShootingStars />
           <StarsBackground />
-          <MobileNavItems />
+          <MobileNavItems onClick={closeMenu} />
         </nav>
       </motion.div>
     </header>

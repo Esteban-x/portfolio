@@ -124,7 +124,10 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className='grid-container'>
-            <div className='rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center'>
+            <div
+              className='rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center'
+              style={isMobile ? { pointerEvents: 'none' } : {}}
+            >
               <Globe
                 height={326}
                 width={326}
