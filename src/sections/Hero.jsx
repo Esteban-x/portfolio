@@ -159,9 +159,9 @@ const Hero = () => {
       </motion.div>
 
       <div className='w-full h-full absolute inset-0 '>
+        <Leva hidden='true' className='hidden' />
         <Canvas className='w-full h-full' shadows>
           <Suspense fallback={<CanvasLoader />}>
-            <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <HeroCamera isMobile={isMobile}>
               <Desk
