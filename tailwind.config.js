@@ -1,12 +1,9 @@
-const svgToDataUri = require('mini-svg-data-uri')
-const {
-  default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette')
+import svgToDataUri from 'mini-svg-data-uri'
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
+import daisyui from 'daisyui'
 
 // tailwind.config.js
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
@@ -59,7 +56,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('daisyui'),
+    daisyui,
     addVariablesForColors,
     function ({ matchUtilities, theme }) {
       matchUtilities(
