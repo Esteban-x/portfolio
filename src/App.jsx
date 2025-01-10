@@ -12,6 +12,16 @@ import { StarsBackground } from './components/ui/stars-background'
 const App = () => {
   useEffect(() => {
     document.title = 'Esteban-x'
+    const metaDescription = document.querySelector('meta[name="description"]')
+
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Portfolio / Esteban-x')
+    } else {
+      const newMetaDescription = document.createElement('meta')
+      newMetaDescription.name = 'description'
+      newMetaDescription.content = 'Portfolio / Esteban-x'
+      document.head.appendChild(newMetaDescription)
+    }
   }, [])
 
   return (
