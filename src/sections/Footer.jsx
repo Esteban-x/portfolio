@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
       <div className='flex items-center mx-auto justify-center gap-3'>
         <motion.a
-          href='https://www.linkedin.com/in/est%C3%A9ban-poumey-9098b516b/'
+          href='https://www.linkedin.com/in/estebanpoumey'
           className='social-icon group'
           target='blank'
           whileHover={{ scale: 1.1 }}
