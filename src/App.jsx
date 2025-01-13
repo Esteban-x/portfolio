@@ -10,20 +10,6 @@ import { ShootingStars } from './components/ui/shooting-stars'
 import { StarsBackground } from './components/ui/stars-background'
 
 const App = () => {
-  useEffect(() => {
-    document.title = 'Esteban-x'
-    const metaDescription = document.querySelector('meta[name="description"]')
-
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Portfolio / Esteban-x')
-    } else {
-      const newMetaDescription = document.createElement('meta')
-      newMetaDescription.name = 'description'
-      newMetaDescription.content = 'Portfolio / Esteban-x'
-      document.head.appendChild(newMetaDescription)
-    }
-  }, [])
-
   return (
     <div className='relative'>
       <div className='absolute inset-0 z-10 w-full h-full'>
